@@ -236,62 +236,42 @@
     }
 
     /* CATEGORY CARDS – warm palette */
-/* CATEGORY GRID CONTAINER */
-.category-grid{
-  max-width:1180px;
-  margin:60px auto;
-  padding:40px 40px 60px;
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:28px;
-  
-  background:#ffffff;
-  border-radius:28px;                   /* round entire section */
-  box-shadow:0 18px 40px rgba(0,0,0,0.06);
-}
 
-/* INDIVIDUAL CATEGORY CARD */
-.cat-card{
-  border-radius:24px !important;        /* stronger rounded corners */
-  padding:26px 22px;
-  font-size:16px;
-  font-weight:600;
-  color:#111827;
-  box-shadow:0 12px 32px rgba(0,0,0,0.05);
-  border:1px solid #efdfcf;
-  transition:transform .18s ease, box-shadow .18s ease;
-}
-
-/* Hover effect (optional but beautiful) */
-.cat-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 45px rgba(0,0,0,0.09);
-}
-
-/* Category label */
-.cat-label{
-  margin-top:6px;
-  font-size:14px;
-  opacity:.85;
-}
-
-rd{
-      border-radius:var(--radius-lg);
-      padding:24px 18px;
-      box-shadow:var(--shadow-soft);
-      color:#111827;
-      font-weight:600;
-      font-size:16px;
-      background:#fff7ec;
-      border:1px solid #f0e6d8;
+    .category-grid{
+      max-width:1180px;
+      margin:60px auto;
+      padding:40px 40px 60px;
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:28px;
+      background:#ffffff;
+      border-radius:28px;
+      box-shadow:0 18px 40px rgba(0,0,0,0.06);
     }
+
+    .cat-card{
+      border-radius:24px;
+      padding:26px 22px;
+      font-size:16px;
+      font-weight:600;
+      color:#111827;
+      box-shadow:0 12px 32px rgba(0,0,0,0.05);
+      border:1px solid #efdfcf;
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+
+    .cat-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 20px 45px rgba(0,0,0,0.09);
+    }
+
     .cat-1{
       background:#ffe9cc;
       border-color:#f3d6b6;
     }
     .cat-2{
       background:#e3edd5;
-      border-color:#efc9a1;
+      border-color:#d7e5c0;
     }
     .cat-3{
       background:#f9eadf;
@@ -299,13 +279,14 @@ rd{
     }
     .cat-4{
       background:#b1c88f;
-      border-color:#eed9be;
+      border-color:#a0b97e;
     }
+
     .cat-label{
-      font-size:13px;
-      font-weight:500;
       margin-top:6px;
+      font-size:14px;
       opacity:.85;
+      font-weight:500;
     }
 
     /* PRODUCT GRID – menu / e-commerce */
@@ -414,6 +395,105 @@ rd{
       box-shadow:0 10px 24px rgba(194,65,12,.55);
     }
 
+    /* CONTACT SECTION */
+
+    .contact-section{
+      max-width:1180px;
+      margin:0 auto 60px;
+      padding:40px 30px 46px;
+      background:#ffffff;
+      border-radius:28px;
+      box-shadow:var(--shadow-soft);
+      display:grid;
+      grid-template-columns:1.1fr 1.1fr;
+      gap:32px;
+    }
+
+    .contact-info h2{
+      font-family:"Playfair Display",serif;
+      font-size:26px;
+      margin-bottom:8px;
+      color:#111827;
+    }
+    .contact-info p{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:16px;
+    }
+    .contact-details{
+      font-size:14px;
+      color:#111827;
+      display:grid;
+      gap:6px;
+      margin-top:8px;
+    }
+    .contact-details span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .contact-form{
+      background:#f9fafb;
+      border-radius:20px;
+      padding:20px 22px 22px;
+      border:1px solid #e5e7eb;
+    }
+    .contact-form-row{
+      display:flex;
+      gap:12px;
+    }
+    .contact-form-group{
+      margin-bottom:12px;
+      flex:1;
+    }
+    .contact-form label{
+      display:block;
+      font-size:12px;
+      font-weight:500;
+      margin-bottom:4px;
+      color:#4b5563;
+    }
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      padding:9px 10px;
+      border-radius:10px;
+      border:1px solid #d1d5db;
+      font-family:inherit;
+      font-size:13px;
+      outline:none;
+      transition:border-color .15s ease, box-shadow .15s ease;
+      background:#ffffff;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus{
+      border-color:var(--accent);
+      box-shadow:0 0 0 1px rgba(255,153,0,.4);
+    }
+    .contact-form textarea{
+      min-height:90px;
+      resize:vertical;
+    }
+    .contact-submit{
+      margin-top:6px;
+      display:flex;
+      justify-content:flex-end;
+    }
+    .btn-contact{
+      border-radius:999px;
+      padding:9px 20px;
+      border:none;
+      background:linear-gradient(135deg,var(--accent),var(--accent-soft));
+      color:#1b1122;
+      font-size:13px;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 12px 26px rgba(194,65,12,.45);
+    }
+    .btn-contact:hover{
+      filter:brightness(1.05);
+    }
+
     /* FOOTER */
 
     footer{
@@ -436,9 +516,14 @@ rd{
       .hero-full{height:420px;}
       .category-grid{
         grid-template-columns:repeat(2,minmax(0,1fr));
+        padding:30px 20px 40px;
       }
       .menu-grid{
         grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .contact-section{
+        grid-template-columns:1fr;
+        padding:30px 20px 34px;
       }
     }
     @media(max-width:640px){
@@ -456,6 +541,9 @@ rd{
       }
       .menu-grid{
         grid-template-columns:minmax(0,1fr);
+      }
+      .contact-form-row{
+        flex-direction:column;
       }
     }
   </style>
@@ -480,6 +568,7 @@ rd{
         <li><a href="#recipes">About</a></li>
         <li><a href="#category">Categories</a></li>
         <li><a href="#shop">Order Online</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -542,10 +631,10 @@ rd{
   <div class="menu-grid-header">
     <div class="menu-title-block">
       <h2>Order from Gio’s</h2>
-     
+      <p>Add dishes to your cart and imagine a full online ordering system behind this design.</p>
     </div>
     <div class="menu-filter">
-      
+      Showing sample dishes · Prices and items are placeholders.
     </div>
   </div>
 
@@ -694,6 +783,54 @@ rd{
       </div>
     </article>
   </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="contact-info">
+    <h2>Contact Gio’s</h2>
+    <p>Have a question about group bookings, special occasions or takeaway orders? Send us a message and the team will get back to you.</p>
+
+    <div class="contact-details">
+      <div><strong>Address</strong><br><span>123 Example Street, Silverdale NSW</span></div>
+      <div><strong>Phone</strong><br><span>(02) 0000 0000</span></div>
+      <div><strong>Email</strong><br><span>hello@giosrestaurant.com.au</span></div>
+      <div><strong>Opening Hours</strong><br><span>Tue – Sun · 5:00 PM – 10:00 PM</span></div>
+    </div>
+  </div>
+
+  <form class="contact-form" action="#" method="post">
+    <div class="contact-form-row">
+      <div class="contact-form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name">
+      </div>
+      <div class="contact-form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com">
+      </div>
+    </div>
+
+    <div class="contact-form-row">
+      <div class="contact-form-group">
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="phone" type="text" placeholder="+61 ...">
+      </div>
+      <div class="contact-form-group">
+        <label for="date">Preferred date (optional)</label>
+        <input id="date" name="date" type="date">
+      </div>
+    </div>
+
+    <div class="contact-form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us about your enquiry or booking request"></textarea>
+    </div>
+
+    <div class="contact-submit">
+      <button type="submit" class="btn-contact">Send enquiry</button>
+    </div>
+  </form>
 </section>
 
 <footer>
