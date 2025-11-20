@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>Gio’s Restaurant – Spanish Fire & Italian Soul</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Order Gio’s Restaurant favourites online – Spanish fire meets Italian soul in Silverdale." />
+  <meta name="description" content="Gio’s Restaurant in Silverdale – Spanish-inspired tapas, wood-fired pizza, pasta and grilled mains." />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -36,12 +36,13 @@
 
     header{
       background:#ffffff;
-      border-bottom:1px solid rgba(229,231,235,.9);
+      border-bottom:1px solid rgba(229, 231, 235, 0.111);
       box-shadow:0 4px 10px rgba(15,23,42,.05);
       position:sticky;
       top:0;
       z-index:30;
     }
+    
     .nav-inner{
       max-width:1180px;
       margin:0 auto;
@@ -158,8 +159,8 @@
     }
     .hero-text h1{
       font-family:"Playfair Display",serif;
-      font-size:50px;
-      line-height:1.25;
+      font-size:46px;
+      line-height:1.2;
       margin-bottom:10px;
     }
     .hero-text p{
@@ -204,13 +205,7 @@
       background:rgba(15,23,42,.35);
     }
 
-    .hero-note{
-      margin-top:10px;
-      font-size:12px;
-      color:#e5e7eb;
-    }
-
-    /* ABOUT / RECIPES BY CATEGORY */
+    /* ABOUT / INTRO */
 
     .section-recipes{
       padding:40px 0 10px;
@@ -235,7 +230,173 @@
       color:var(--muted);
     }
 
-    /* CATEGORY CARDS – warm palette */
+    /* FEATURED DISHES */
+
+    .featured-section{
+      padding:45px 0 40px;
+      background:#ffffff;
+    }
+    .featured-inner{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+    .featured-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:16px;
+      margin-bottom:24px;
+    }
+    .featured-header h2{
+      font-family:"Playfair Display",serif;
+      font-size:24px;
+      color:#111827;
+    }
+    .featured-header p{
+      font-size:13px;
+      color:var(--muted);
+      max-width:420px;
+    }
+    .featured-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:5px 11px;
+      border-radius:999px;
+      background:rgba(255,153,0,.08);
+      border:1px solid rgba(255,153,0,.4);
+      font-size:11px;
+      color:#92400e;
+      font-weight:500;
+      margin-bottom:6px;
+    }
+    .featured-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+    .featured-card{
+      background:#ffffff;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid #f3e7d9;
+      box-shadow:0 18px 40px rgba(0,0,0,0.06);
+      display:flex;
+      flex-direction:column;
+    }
+    .featured-image{
+      height:170px;
+      overflow:hidden;
+    }
+    .featured-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .featured-body{
+      padding:14px 16px 16px;
+    }
+    .featured-name{
+      font-weight:600;
+      font-size:15px;
+      color:#111827;
+      margin-bottom:4px;
+    }
+    .featured-meta{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:8px;
+    }
+    .featured-tag-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:12px;
+      margin-top:4px;
+    }
+    .featured-tag{
+      color:var(--accent-dark);
+      font-weight:500;
+    }
+    .featured-price{
+      font-weight:700;
+      color:var(--accent-dark);
+    }
+
+    /* CHEF STORY */
+
+    .chef-section{
+      padding:40px 0 50px;
+      background:linear-gradient(135deg,#fff7ec,#ffffff);
+    }
+    .chef-inner{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 20px;
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:32px;
+      align-items:center;
+    }
+    .chef-copy h2{
+      font-family:"Playfair Display",serif;
+      font-size:26px;
+      margin-bottom:10px;
+      color:#111827;
+    }
+    .chef-copy h3{
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:#b45309;
+      margin-bottom:4px;
+    }
+    .chef-copy p{
+      font-size:14px;
+      color:#4b5563;
+      margin-bottom:10px;
+    }
+    .chef-signature{
+      margin-top:10px;
+      font-size:13px;
+      color:#111827;
+      font-weight:500;
+    }
+    .chef-signature span{
+      display:block;
+      font-size:11px;
+      color:#6b7280;
+    }
+    .chef-badge-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:10px;
+    }
+    .chef-pill{
+      padding:5px 11px;
+      border-radius:999px;
+      border:1px solid rgba(148,163,184,.6);
+      font-size:11px;
+      color:#4b5563;
+      background:rgba(255,255,255,.7);
+    }
+    .chef-photo-wrap{
+      border-radius:26px;
+      overflow:hidden;
+      box-shadow:0 18px 40px rgba(0,0,0,0.13);
+      border:1px solid rgba(248,250,252,.8);
+      background:#000;
+    }
+    .chef-photo-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:.9;
+    }
+
+    /* CATEGORY CARDS */
 
     .category-grid{
       max-width:1180px;
@@ -395,6 +556,192 @@
       box-shadow:0 10px 24px rgba(194,65,12,.55);
     }
 
+    /* TESTIMONIALS / REVIEWS */
+
+    .reviews-section{
+      padding:60px 0 70px;
+      background:#ffffff;
+    }
+
+    .reviews-inner{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 20px;
+      text-align:center;
+    }
+
+    .reviews-inner h2{
+      font-family:"Playfair Display",serif;
+      font-size:28px;
+      color:#111827;
+      margin-bottom:8px;
+    }
+
+    .reviews-sub{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:40px;
+    }
+
+    .reviews-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:22px;
+    }
+
+    .review-card{
+      background:#ffffff;
+      border-radius:20px;
+      padding:24px 22px;
+      box-shadow:0 14px 38px rgba(0,0,0,0.06);
+      border:1px solid #f0ece4;
+      text-align:left;
+      transition:transform .16s ease;
+    }
+
+    .review-card:hover{
+      transform:translateY(-4px);
+    }
+
+    .review-stars{
+      font-size:18px;
+      color:#ff9900;
+      margin-bottom:10px;
+    }
+
+    .review-text{
+      font-size:14px;
+      color:#374151;
+      margin-bottom:14px;
+      line-height:1.55;
+    }
+
+    .review-author{
+      font-size:13px;
+      font-weight:600;
+      color:#111827;
+    }
+
+    /* GALLERY */
+
+    .gallery-section{
+      padding:50px 0 60px;
+      background:#ffffff;
+    }
+    .gallery-inner{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+    .gallery-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:16px;
+      margin-bottom:24px;
+    }
+    .gallery-header h2{
+      font-family:"Playfair Display",serif;
+      font-size:24px;
+      color:#111827;
+    }
+    .gallery-header p{
+      font-size:13px;
+      color:var(--muted);
+      max-width:420px;
+    }
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:16px;
+    }
+    .gallery-item{
+      border-radius:18px;
+      overflow:hidden;
+      position:relative;
+      box-shadow:0 14px 32px rgba(0,0,0,0.08);
+    }
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .2s ease, opacity .2s ease;
+    }
+    .gallery-item::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top,rgba(0,0,0,.45),transparent 60%);
+      opacity:0;
+      transition:opacity .2s ease;
+    }
+    .gallery-item:hover img{
+      transform:scale(1.03);
+      opacity:.95;
+    }
+    .gallery-item:hover::after{
+      opacity:1;
+    }
+    .gallery-label{
+      position:absolute;
+      left:12px;
+      bottom:10px;
+      font-size:12px;
+      color:#f9fafb;
+      font-weight:500;
+      letter-spacing:.03em;
+    }
+
+    /* LOCATION / MAP + HOURS */
+
+    .location-section{
+      padding:45px 0 55px;
+      background:#ffffff;
+    }
+    .location-inner{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 20px;
+      display:grid;
+      grid-template-columns:1.1fr 0.9fr;
+      gap:26px;
+    }
+    .location-copy h2{
+      font-family:"Playfair Display",serif;
+      font-size:24px;
+      margin-bottom:6px;
+      color:#111827;
+    }
+    .location-copy p{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:14px;
+    }
+    .location-details{
+      font-size:14px;
+      color:#111827;
+      display:grid;
+      gap:8px;
+      margin-top:6px;
+    }
+    .location-details span{
+      font-size:13px;
+      color:#6b7280;
+    }
+    .location-map{
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 18px 40px rgba(0,0,0,0.12);
+      border:1px solid #e5e7eb;
+      min-height:260px;
+    }
+    .location-map iframe{
+      width:100%;
+      height:100%;
+      border:0;
+      display:block;
+    }
+
     /* CONTACT SECTION */
 
     .contact-section{
@@ -525,6 +872,19 @@
         grid-template-columns:1fr;
         padding:30px 20px 34px;
       }
+      .reviews-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .featured-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .gallery-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .chef-inner,
+      .location-inner{
+        grid-template-columns:1fr;
+      }
     }
     @media(max-width:640px){
       .hero-full{height:400px;}
@@ -545,6 +905,11 @@
       .contact-form-row{
         flex-direction:column;
       }
+      .reviews-grid,
+      .featured-grid,
+      .gallery-grid{
+        grid-template-columns:minmax(0,1fr);
+      }
     }
   </style>
 </head>
@@ -553,9 +918,7 @@
 <header>
   <div class="nav-inner">
     <div class="brand">
-      <!-- LOGO WITH TRANSPARENT BACKGROUND -->
       <img src="logo2.png" alt="Gio's Restaurant logo" class="brand-logo">
-
       <div class="brand-text">
         <div class="brand-name">Gio’s Restaurant</div>
         <div class="brand-tag">Spanish fire • Italian soul • Silverdale</div>
@@ -566,8 +929,10 @@
       <ul>
         <li><a href="#hero">Home</a></li>
         <li><a href="#recipes">About</a></li>
-        <li><a href="#category">Categories</a></li>
-        <li><a href="#shop">Order Online</a></li>
+        <li><a href="#featured">Chef’s Picks</a></li>
+        <li><a href="#shop">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#location">Visit</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -575,7 +940,7 @@
     <div class="nav-cta">
       <div class="icon-circle">👤</div>
       <div class="icon-circle">🛒</div>
-      <button class="btn-outline">Book a Table</button>
+      <button class="btn-outline">Book a table</button>
     </div>
   </div>
 </header>
@@ -583,15 +948,13 @@
 <!-- HERO -->
 <section id="hero" class="hero-full">
   <div class="hero-overlay"></div>
-
   <div class="hero-container">
     <div class="hero-text">
       <div class="hero-text-tag">Gio’s · Silverdale NSW</div>
-      <h1>Where Spanish fire meets Italian comfort.</h1>
-      <p>Order Gio’s favourites online – from wood-fired pizzas and tapas to hearty pasta and grilled mains, ready for pickup.</p>
-
+      <h1>Spanish fire. Italian soul.</h1>
+      <p>Wood-fired pizza, tapas, pasta and grilled mains – perfect for long dinners, quick catch-ups and cosy date nights.</p>
       <div class="hero-cta-row">
-        <a href="#shop" class="hero-btn hero-btn-primary">Order now</a>
+        <a href="#shop" class="hero-btn hero-btn-primary">Order online</a>
         <a href="#shop" class="hero-btn hero-btn-ghost">View full menu</a>
       </div>
     </div>
@@ -601,8 +964,95 @@
 <!-- ABOUT / INTRO -->
 <section id="recipes" class="section-recipes">
   <div class="recipes-inner">
-    <h2>Discover Gio’s Favourites</h2>
-    <p>Browse by category and add Spanish-inspired tapas, wood-fired mains, handcrafted pastas and pizzas to your order – just like a modern food app.</p>
+    <h2>Welcome to Gio’s</h2>
+    <p>Spanish-inspired tapas, wood-fired mains and handmade pasta, served with easygoing hospitality in the heart of Silverdale.</p>
+  </div>
+</section>
+
+<!-- FEATURED DISHES -->
+<section id="featured" class="featured-section">
+  <div class="featured-inner">
+    <div class="featured-header">
+      <div>
+        <div class="featured-badge">⭐ Chef’s picks</div>
+        <h2>Featured dishes</h2>
+      </div>
+      <p>Not sure where to start? These are the plates our guests order again and again.</p>
+    </div>
+
+    <div class="featured-grid">
+      <!-- Featured 1 -->
+      <article class="featured-card">
+        <div class="featured-image">
+          <img src="gio.png" alt="Gio’s Signature Pizza">
+        </div>
+        <div class="featured-body">
+          <div class="featured-name">Gio’s Signature Pizza</div>
+          <div class="featured-meta">Soppressa, peppers, olives and fior di latte on a blistered, wood-fired base.</div>
+          <div class="featured-tag-row">
+            <span class="featured-tag">Pizza • House favourite</span>
+            <span class="featured-price">$27.00</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Featured 2 -->
+      <article class="featured-card">
+        <div class="featured-image">
+          <img src="prawn.png" alt="Fire-Kissed Prawns">
+        </div>
+        <div class="featured-body">
+          <div class="featured-name">Fire-kissed Prawns</div>
+          <div class="featured-meta">Charred prawns with chilli, garlic butter and roasted tomato.</div>
+          <div class="featured-tag-row">
+            <span class="featured-tag">Tapas • Seafood</span>
+            <span class="featured-price">$24.00</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Featured 3 -->
+      <article class="featured-card">
+        <div class="featured-image">
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80" alt="Truffle Tagliatelle">
+        </div>
+        <div class="featured-body">
+          <div class="featured-name">Truffle Tagliatelle</div>
+          <div class="featured-meta">Silky pasta with porcini cream, parmesan and shaved black truffle.</div>
+          <div class="featured-tag-row">
+            <span class="featured-tag">Pasta • Rich &amp; cosy</span>
+            <span class="featured-price">$29.00</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CHEF STORY -->
+<section id="chef" class="chef-section">
+  <div class="chef-inner">
+    <div class="chef-copy">
+      <h3>IN THE KITCHEN</h3>
+      <h2>Meet the chef behind the fire.</h2>
+      <p>After years cooking between Barcelona and Rome, our head chef Gio brought his love for smoky Spanish flavours and slow Italian comfort to Silverdale.</p>
+      <p>From tapas and wood-grilled meats to hand-stretched pizza dough, every dish is built on simple ingredients, time and heat.</p>
+
+      <div class="chef-badge-row">
+        <div class="chef-pill">20+ years’ experience</div>
+        <div class="chef-pill">Wood-fired oven centre stage</div>
+        <div class="chef-pill">Seasonal local produce</div>
+      </div>
+
+      <div class="chef-signature">
+        Chef Gio
+        <span>Head Chef &amp; Owner</span>
+      </div>
+    </div>
+
+    <div class="chef-photo-wrap">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Chef in a restaurant kitchen">
+    </div>
   </div>
 </section>
 
@@ -610,15 +1060,15 @@
 <section id="category" class="category-grid">
   <div class="cat-card cat-1">
     Tapas
-    <div class="cat-label">Perfect for sharing – chorizo, patatas bravas, prawns &amp; more.</div>
+    <div class="cat-label">Chorizo, patatas bravas, prawns and more to share.</div>
   </div>
   <div class="cat-card cat-2">
     From the Fire
-    <div class="cat-label">Wood-grilled steaks, lamb skewers and flame-kissed seafood.</div>
+    <div class="cat-label">Wood-grilled steaks, lamb skewers and seafood.</div>
   </div>
   <div class="cat-card cat-3">
     Pasta &amp; Mains
-    <div class="cat-label">Comfort bowls of risotto, ragu and oven-baked specials.</div>
+    <div class="cat-label">Comfort bowls of risotto, ragu and oven-baked dishes.</div>
   </div>
   <div class="cat-card cat-4">
     Pizza &amp; Desserts
@@ -630,11 +1080,11 @@
 <section id="shop" class="menu-grid-section">
   <div class="menu-grid-header">
     <div class="menu-title-block">
-      <h2>Order from Gio’s</h2>
-      <p>Add dishes to your cart and imagine a full online ordering system behind this design.</p>
+      <h2>Our menu</h2>
+      <p>Browse a few highlights from Gio’s. Ask our team for tonight’s specials.</p>
     </div>
     <div class="menu-filter">
-      Showing sample dishes · Prices and items are placeholders.
+      Dine-in and takeaway available.
     </div>
   </div>
 
@@ -645,8 +1095,8 @@
         <img src="patatas.png" alt="Patatas Bravas">
       </div>
       <div class="product-body">
-        <div class="product-name">Patatas Bravas</div>
-        <div class="product-meta">Crispy potatoes with garlic aioli.</div>
+        <div class="product-name">Patatas bravas</div>
+        <div class="product-meta">Crispy potatoes with spiced tomato and garlic aioli.</div>
         <div class="product-tag">Tapas</div>
         <div class="product-bottom">
           <div class="product-price">$14.00</div>
@@ -661,8 +1111,8 @@
         <img src="chorizo.png" alt="Charred chorizo and peppers">
       </div>
       <div class="product-body">
-        <div class="product-name">Charred Chorizo</div>
-        <div class="product-meta">Smoky chorizo &amp; blistered peppers.</div>
+        <div class="product-name">Charred chorizo</div>
+        <div class="product-meta">Smoky chorizo with blistered peppers and lemon.</div>
         <div class="product-tag">Tapas</div>
         <div class="product-bottom">
           <div class="product-price">$18.00</div>
@@ -677,8 +1127,8 @@
         <img src="prawn.png" alt="Fire-kissed prawns">
       </div>
       <div class="product-body">
-        <div class="product-name">Fire-Kissed Prawns</div>
-        <div class="product-meta">Chilli, herb butter &amp; roasted tomato.</div>
+        <div class="product-name">Fire-kissed prawns</div>
+        <div class="product-meta">Prawns grilled over flame with chilli and herbs.</div>
         <div class="product-tag">Seafood</div>
         <div class="product-bottom">
           <div class="product-price">$24.00</div>
@@ -693,9 +1143,9 @@
         <img src="lamb.png" alt="Wood-fired lamb skewers">
       </div>
       <div class="product-body">
-        <div class="product-name">Lamb Skewers</div>
-        <div class="product-meta">Wood-fired lamb with chimichurri.</div>
-        <div class="product-tag">From the Fire</div>
+        <div class="product-name">Lamb skewers</div>
+        <div class="product-meta">Wood-fired lamb with chimichurri and lemon.</div>
+        <div class="product-tag">From the fire</div>
         <div class="product-bottom">
           <div class="product-price">$29.00</div>
           <button class="btn-mini">Add to cart</button>
@@ -709,9 +1159,9 @@
         <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=900&q=80" alt="Seafood risotto">
       </div>
       <div class="product-body">
-        <div class="product-name">Seafood Risotto</div>
-        <div class="product-meta">Creamy risotto with prawns &amp; mussels.</div>
-        <div class="product-tag">Pasta &amp; Mains</div>
+        <div class="product-name">Seafood risotto</div>
+        <div class="product-meta">Creamy risotto with prawns, mussels and herbs.</div>
+        <div class="product-tag">Pasta &amp; mains</div>
         <div class="product-bottom">
           <div class="product-price">$32.00</div>
           <button class="btn-mini">Add to cart</button>
@@ -725,8 +1175,8 @@
         <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80" alt="Truffle tagliatelle">
       </div>
       <div class="product-body">
-        <div class="product-name">Truffle Tagliatelle</div>
-        <div class="product-meta">Porcini cream, parmesan &amp; black truffle.</div>
+        <div class="product-name">Truffle tagliatelle</div>
+        <div class="product-meta">Porcini cream, parmesan and black truffle.</div>
         <div class="product-tag">Pasta</div>
         <div class="product-bottom">
           <div class="product-price">$29.00</div>
@@ -741,8 +1191,8 @@
         <img src="gio.png" alt="Gio’s signature pizza">
       </div>
       <div class="product-body">
-        <div class="product-name">Gio’s Signature Pizza</div>
-        <div class="product-meta">Soppressa, peppers, olives &amp; fior di latte.</div>
+        <div class="product-name">Gio’s signature pizza</div>
+        <div class="product-meta">Soppressa, peppers, olives and fior di latte.</div>
         <div class="product-tag">Pizza</div>
         <div class="product-bottom">
           <div class="product-price">$27.00</div>
@@ -757,8 +1207,8 @@
         <img src="pizza.png" alt="Margherita pizza">
       </div>
       <div class="product-body">
-        <div class="product-name">San Marzano Margherita</div>
-        <div class="product-meta">San Marzano tomatoes, basil &amp; olive oil.</div>
+        <div class="product-name">San Marzano margherita</div>
+        <div class="product-meta">San Marzano tomatoes, basil and olive oil.</div>
         <div class="product-tag">Pizza</div>
         <div class="product-bottom">
           <div class="product-price">$23.00</div>
@@ -773,8 +1223,8 @@
         <img src="cake.png" alt="Basque cheesecake">
       </div>
       <div class="product-body">
-        <div class="product-name">Basque Cheesecake</div>
-        <div class="product-meta">Burnt cheesecake with fresh fruit.</div>
+        <div class="product-name">Basque cheesecake</div>
+        <div class="product-meta">Burnt Basque cheesecake with seasonal fruit.</div>
         <div class="product-tag">Dessert</div>
         <div class="product-bottom">
           <div class="product-price">$15.00</div>
@@ -785,17 +1235,126 @@
   </div>
 </section>
 
+<!-- TESTIMONIALS / REVIEWS -->
+<section id="reviews" class="reviews-section">
+  <div class="reviews-inner">
+    <h2>Guest reviews</h2>
+    <p class="reviews-sub">A few words from the people who’ve shared a night at Gio’s.</p>
+
+    <div class="reviews-grid">
+
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">“Best wood-fired pizza we’ve had in ages. Great crust, generous toppings and really friendly staff.”</p>
+        <div class="review-author">— Sarah J.</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">“Tapas were perfect for sharing. The prawns and chorizo were standouts. We’ll be back with friends.”</p>
+        <div class="review-author">— Michael T.</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">“Cosy, warm atmosphere and the truffle pasta was amazing. Book ahead on weekends – it gets busy.”</p>
+        <div class="review-author">— Olivia R.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="gallery-section">
+  <div class="gallery-inner">
+    <div class="gallery-header">
+      <div>
+        <h2>Inside Gio’s</h2>
+      </div>
+      <p>A look at the food, the room and the moments that make Gio’s feel like your local.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="gio.png" alt="Wood-fired pizza at Gio’s">
+        <div class="gallery-label">Wood-fired pizzas</div>
+      </div>
+      <div class="gallery-item">
+        <img src="prawn.png" alt="Tapas plates at Gio’s">
+        <div class="gallery-label">Tapas to share</div>
+      </div>
+      <div class="gallery-item">
+        <img src="cake.png" alt="Dessert at Gio’s">
+        <div class="gallery-label">Desserts &amp; coffee</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1000&q=80" alt="Restaurant interior">
+        <div class="gallery-label">Warm dining room</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1000&q=80" alt="Wine and drinks">
+        <div class="gallery-label">Wine &amp; cocktails</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1521017432544-2aa0f77c543b?auto=format&fit=crop&w=1000&q=80" alt="Friends dining">
+        <div class="gallery-label">Nights with friends</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION / MAP + HOURS -->
+<section id="location" class="location-section">
+  <div class="location-inner">
+    <div class="location-copy">
+      <h2>Visit Gio’s in Silverdale</h2>
+      <p>Find us just off the main road in Silverdale – easy to get to, and hard to leave.</p>
+
+      <div class="location-details">
+        <div>
+          <strong>Address</strong><br>
+          <span>123 Example Street, Silverdale NSW</span>
+        </div>
+        <div>
+          <strong>Opening hours</strong><br>
+          <span>Tuesday – Sunday · 5:00 PM – 10:00 PM</span>
+        </div>
+        <div>
+          <strong>Bookings</strong><br>
+          <span>Call (02) 0000 0000 or send us a message below.</span>
+        </div>
+        <div>
+          <strong>Parking</strong><br>
+          <span>Street parking available nearby.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="location-map" aria-label="Map showing Gio’s Restaurant in Silverdale">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13238.28091075124!2d150.655!3d-34.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSilverdale%20NSW!5e0!3m2!1sen!2sau!4v1700000000000"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
   <div class="contact-info">
     <h2>Contact Gio’s</h2>
-    <p>Have a question about group bookings, special occasions or takeaway orders? Send us a message and the team will get back to you.</p>
+    <p>Planning a celebration, group dinner or takeaway for tonight? Send us a note and we’ll be in touch.</p>
 
     <div class="contact-details">
       <div><strong>Address</strong><br><span>123 Example Street, Silverdale NSW</span></div>
       <div><strong>Phone</strong><br><span>(02) 0000 0000</span></div>
       <div><strong>Email</strong><br><span>hello@giosrestaurant.com.au</span></div>
-      <div><strong>Opening Hours</strong><br><span>Tue – Sun · 5:00 PM – 10:00 PM</span></div>
+      <div><strong>Opening hours</strong><br><span>Tuesday – Sunday · 5:00 PM – 10:00 PM</span></div>
     </div>
   </div>
 
@@ -824,7 +1383,7 @@
 
     <div class="contact-form-group">
       <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Tell us about your enquiry or booking request"></textarea>
+      <textarea id="message" name="message" placeholder="Tell us about your booking or enquiry"></textarea>
     </div>
 
     <div class="contact-submit">
@@ -834,8 +1393,8 @@
 </section>
 
 <footer>
-  <span>© Gio’s Restaurant · Sample e-commerce layout for portfolio/demo use.</span>
-  <span>Design &amp; code by Jeanette · Not an official ordering system.</span>
+  <span>© Gio’s Restaurant.</span>
+  <span>Concept layout designed by Jeanette for portfolio use.</span>
 </footer>
 
 </body>
