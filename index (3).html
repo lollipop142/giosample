@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gio’s Restaurant – Spanish Fire & Italian Soul</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Order Gio’s Restaurant favourites online – Spanish fire meets Italian soul in Silverdale." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --page-bg:#f5f7fb;
+      --accent:#ff9900;
+      --accent-soft:#ffe5b3;
+      --accent-dark:#c05621;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --radius-lg:18px;
+      --shadow-soft:0 18px 40px rgba(15,23,42,.14);
+      --shadow-card:0 18px 38px rgba(148,163,184,.35);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:"Poppins",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--page-bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    img{max-width:100%;display:block;object-fit:cover;}
+    a{text-decoration:none;color:inherit;}
+
+    /* HEADER */
+
+    header{
+      background:#ffffff;
+      border-bottom:1px solid rgba(229,231,235,.9);
+      box-shadow:0 4px 10px rgba(15,23,42,.05);
+      position:sticky;
+      top:0;
+      z-index:30;
+    }
+    .nav-inner{
+      max-width:1180px;
+      margin:0 auto;
+      padding:14px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .brand-logo{
+      height:40px;
+      width:auto;
+      display:block;
+    }
+    .brand-text{display:flex;flex-direction:column;gap:2px;}
+    .brand-name{
+      font-family:"Playfair Display",serif;
+      font-size:18px;
+      font-weight:700;
+    }
+    .brand-tag{font-size:11px;color:var(--muted);}
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:13px;
+    }
+    nav a{
+      color:var(--muted);
+      font-weight:500;
+      position:relative;
+      padding-bottom:3px;
+      transition:color .16s ease;
+    }
+    nav a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:2px;
+      background:var(--accent);
+      transition:width .18s ease;
+    }
+    nav a:hover{
+      color:var(--text);
+    }
+    nav a:hover::after{
+      width:100%;
+    }
+
+    .nav-cta{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .icon-circle{
+      width:30px;height:30px;border-radius:999px;
+      border:1px solid #d1d5db;
+      display:flex;align-items:center;justify-content:center;
+      font-size:14px;color:var(--muted);background:#ffffff;
+    }
+    .btn-outline{
+      border-radius:999px;border:2px solid #111827;
+      padding:7px 16px;font-size:12px;background:transparent;
+      cursor:pointer;font-weight:600;color:#111827;
+      transition:background .16s ease,color .16s ease;
+    }
+    .btn-outline:hover{
+      background:#111827;
+      color:#ffffff;
+    }
+
+    /* HERO – full background image (food.jpg) */
+
+    .hero-full{
+      position:relative;
+      width:100%;
+      height:480px;
+      background:url("food.jpg") center/cover no-repeat;
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+    }
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(0,0,0,0.7),rgba(0,0,0,0.25));
+    }
+    .hero-container{
+      position:relative;
+      max-width:1180px;
+      padding:0 20px;
+      margin:0 auto;
+      width:100%;
+    }
+    .hero-text{
+      color:#ffffff;
+      max-width:520px;
+    }
+    .hero-text-tag{
+      font-size:13px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      opacity:.9;
+      margin-bottom:6px;
+    }
+    .hero-text h1{
+      font-family:"Playfair Display",serif;
+      font-size:50px;
+      line-height:1.25;
+      margin-bottom:10px;
+    }
+    .hero-text p{
+      font-size:15px;
+      opacity:.9;
+      margin-bottom:22px;
+    }
+
+    /* HERO CTA BUTTONS */
+
+    .hero-cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .hero-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 22px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:600;
+      text-decoration:none;
+      cursor:pointer;
+      border:none;
+    }
+    .hero-btn-primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent-soft));
+      color:#1b1122;
+      box-shadow:0 14px 32px rgba(0,0,0,.7);
+    }
+    .hero-btn-primary:hover{
+      filter:brightness(1.05);
+    }
+    .hero-btn-ghost{
+      background:rgba(15,23,42,.1);
+      border:1px solid rgba(255,255,255,.7);
+      color:#f9fafb;
+    }
+    .hero-btn-ghost:hover{
+      background:rgba(15,23,42,.35);
+    }
+
+    .hero-note{
+      margin-top:10px;
+      font-size:12px;
+      color:#e5e7eb;
+    }
+
+    /* ABOUT / RECIPES BY CATEGORY */
+
+    .section-recipes{
+      padding:40px 0 10px;
+      background:#ffffff;
+    }
+    .recipes-inner{
+      max-width:1180px;
+      margin:0 auto;
+      padding:0 20px;
+      text-align:center;
+    }
+    .recipes-inner h2{
+      font-family:"Playfair Display",serif;
+      font-size:26px;
+      margin-bottom:6px;
+      color:#111827;
+    }
+    .recipes-inner p{
+      max-width:520px;
+      margin:0 auto;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* CATEGORY CARDS – warm palette */
+/* CATEGORY GRID CONTAINER */
+.category-grid{
+  max-width:1180px;
+  margin:60px auto;
+  padding:40px 40px 60px;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:28px;
+  
+  background:#ffffff;
+  border-radius:28px;                   /* round entire section */
+  box-shadow:0 18px 40px rgba(0,0,0,0.06);
+}
+
+/* INDIVIDUAL CATEGORY CARD */
+.cat-card{
+  border-radius:24px !important;        /* stronger rounded corners */
+  padding:26px 22px;
+  font-size:16px;
+  font-weight:600;
+  color:#111827;
+  box-shadow:0 12px 32px rgba(0,0,0,0.05);
+  border:1px solid #efdfcf;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+
+/* Hover effect (optional but beautiful) */
+.cat-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 20px 45px rgba(0,0,0,0.09);
+}
+
+/* Category label */
+.cat-label{
+  margin-top:6px;
+  font-size:14px;
+  opacity:.85;
+}
+
+rd{
+      border-radius:var(--radius-lg);
+      padding:24px 18px;
+      box-shadow:var(--shadow-soft);
+      color:#111827;
+      font-weight:600;
+      font-size:16px;
+      background:#fff7ec;
+      border:1px solid #f0e6d8;
+    }
+    .cat-1{
+      background:#ffe9cc;
+      border-color:#f3d6b6;
+    }
+    .cat-2{
+      background:#e3edd5;
+      border-color:#efc9a1;
+    }
+    .cat-3{
+      background:#f9eadf;
+      border-color:#e9d2c4;
+    }
+    .cat-4{
+      background:#b1c88f;
+      border-color:#eed9be;
+    }
+    .cat-label{
+      font-size:13px;
+      font-weight:500;
+      margin-top:6px;
+      opacity:.85;
+    }
+
+    /* PRODUCT GRID – menu / e-commerce */
+
+    .menu-grid-section{
+      max-width:1180px;
+      margin:0 auto 40px;
+      padding:0 20px 40px;
+      background:#ffffff;
+    }
+    .menu-grid-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .menu-title-block h2{
+      font-family:"Playfair Display",serif;
+      font-size:22px;
+      color:#111827;
+    }
+    .menu-title-block p{
+      font-size:13px;
+      color:var(--muted);
+    }
+    .menu-filter{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .menu-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+    .product-card{
+      background:#ffffff;
+      border-radius:16px;
+      border:1px solid var(--border);
+      box-shadow:var(--shadow-card);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+    .product-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(249,115,22,.6);
+      box-shadow:0 24px 55px rgba(148,72,24,.45);
+    }
+
+    .product-image{
+      height:160px;
+      overflow:hidden;
+    }
+    .product-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .product-body{
+      padding:12px 14px 14px;
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+    .product-name{
+      font-weight:600;
+      font-size:14px;
+      color:#111827;
+    }
+    .product-meta{
+      font-size:12px;
+      color:var(--muted);
+    }
+    .product-tag{
+      font-size:11px;
+      color:var(--accent-dark);
+      font-weight:500;
+    }
+    .product-bottom{
+      margin-top:10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:6px;
+    }
+    .product-price{
+      font-weight:700;
+      color:var(--accent-dark);
+      font-size:14px;
+    }
+    .btn-mini{
+      border-radius:999px;
+      padding:7px 12px;
+      border:none;
+      background:linear-gradient(135deg,var(--accent),var(--accent-soft));
+      color:#1b1122;
+      font-size:11px;
+      cursor:pointer;
+      font-weight:600;
+      white-space:nowrap;
+      box-shadow:0 10px 24px rgba(194,65,12,.55);
+    }
+
+    /* FOOTER */
+
+    footer{
+      max-width:1180px;
+      margin:0 auto;
+      padding:16px 20px 30px;
+      border-top:1px solid var(--border);
+      font-size:11px;
+      color:var(--muted);
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:960px){
+      nav ul{display:none;}
+      .hero-full{height:420px;}
+      .category-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+      .menu-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+    @media(max-width:640px){
+      .hero-full{height:400px;}
+      .hero-text h1{font-size:28px;}
+      .hero-cta-row{
+        flex-direction:column;
+      }
+      .hero-btn{
+        width:100%;
+        justify-content:center;
+      }
+      .category-grid{
+        grid-template-columns:minmax(0,1fr);
+      }
+      .menu-grid{
+        grid-template-columns:minmax(0,1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <!-- LOGO WITH TRANSPARENT BACKGROUND -->
+      <img src="logo2.png" alt="Gio's Restaurant logo" class="brand-logo">
+
+      <div class="brand-text">
+        <div class="brand-name">Gio’s Restaurant</div>
+        <div class="brand-tag">Spanish fire • Italian soul • Silverdale</div>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#recipes">About</a></li>
+        <li><a href="#category">Categories</a></li>
+        <li><a href="#shop">Order Online</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-cta">
+      <div class="icon-circle">👤</div>
+      <div class="icon-circle">🛒</div>
+      <button class="btn-outline">Book a Table</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero-full">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-container">
+    <div class="hero-text">
+      <div class="hero-text-tag">Gio’s · Silverdale NSW</div>
+      <h1>Where Spanish fire meets Italian comfort.</h1>
+      <p>Order Gio’s favourites online – from wood-fired pizzas and tapas to hearty pasta and grilled mains, ready for pickup.</p>
+
+      <div class="hero-cta-row">
+        <a href="#shop" class="hero-btn hero-btn-primary">Order now</a>
+        <a href="#shop" class="hero-btn hero-btn-ghost">View full menu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / INTRO -->
+<section id="recipes" class="section-recipes">
+  <div class="recipes-inner">
+    <h2>Discover Gio’s Favourites</h2>
+    <p>Browse by category and add Spanish-inspired tapas, wood-fired mains, handcrafted pastas and pizzas to your order – just like a modern food app.</p>
+  </div>
+</section>
+
+<!-- CATEGORY CARDS -->
+<section id="category" class="category-grid">
+  <div class="cat-card cat-1">
+    Tapas
+    <div class="cat-label">Perfect for sharing – chorizo, patatas bravas, prawns &amp; more.</div>
+  </div>
+  <div class="cat-card cat-2">
+    From the Fire
+    <div class="cat-label">Wood-grilled steaks, lamb skewers and flame-kissed seafood.</div>
+  </div>
+  <div class="cat-card cat-3">
+    Pasta &amp; Mains
+    <div class="cat-label">Comfort bowls of risotto, ragu and oven-baked specials.</div>
+  </div>
+  <div class="cat-card cat-4">
+    Pizza &amp; Desserts
+    <div class="cat-label">Thin-base pizzas, tiramisu, Basque cheesecake and more.</div>
+  </div>
+</section>
+
+<!-- MENU GRID -->
+<section id="shop" class="menu-grid-section">
+  <div class="menu-grid-header">
+    <div class="menu-title-block">
+      <h2>Order from Gio’s</h2>
+     
+    </div>
+    <div class="menu-filter">
+      
+    </div>
+  </div>
+
+  <div class="menu-grid">
+    <!-- 1: Patatas Bravas -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="patatas.png" alt="Patatas Bravas">
+      </div>
+      <div class="product-body">
+        <div class="product-name">Patatas Bravas</div>
+        <div class="product-meta">Crispy potatoes with garlic aioli.</div>
+        <div class="product-tag">Tapas</div>
+        <div class="product-bottom">
+          <div class="product-price">$14.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2: Charred Chorizo -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="chorizo.png" alt="Charred chorizo and peppers">
+      </div>
+      <div class="product-body">
+        <div class="product-name">Charred Chorizo</div>
+        <div class="product-meta">Smoky chorizo &amp; blistered peppers.</div>
+        <div class="product-tag">Tapas</div>
+        <div class="product-bottom">
+          <div class="product-price">$18.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3: Fire-Kissed Prawns -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="prawn.png" alt="Fire-kissed prawns">
+      </div>
+      <div class="product-body">
+        <div class="product-name">Fire-Kissed Prawns</div>
+        <div class="product-meta">Chilli, herb butter &amp; roasted tomato.</div>
+        <div class="product-tag">Seafood</div>
+        <div class="product-bottom">
+          <div class="product-price">$24.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4: Lamb Skewers -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="lamb.png" alt="Wood-fired lamb skewers">
+      </div>
+      <div class="product-body">
+        <div class="product-name">Lamb Skewers</div>
+        <div class="product-meta">Wood-fired lamb with chimichurri.</div>
+        <div class="product-tag">From the Fire</div>
+        <div class="product-bottom">
+          <div class="product-price">$29.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5: Seafood Risotto -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=900&q=80" alt="Seafood risotto">
+      </div>
+      <div class="product-body">
+        <div class="product-name">Seafood Risotto</div>
+        <div class="product-meta">Creamy risotto with prawns &amp; mussels.</div>
+        <div class="product-tag">Pasta &amp; Mains</div>
+        <div class="product-bottom">
+          <div class="product-price">$32.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6: Truffle Tagliatelle -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=80" alt="Truffle tagliatelle">
+      </div>
+      <div class="product-body">
+        <div class="product-name">Truffle Tagliatelle</div>
+        <div class="product-meta">Porcini cream, parmesan &amp; black truffle.</div>
+        <div class="product-tag">Pasta</div>
+        <div class="product-bottom">
+          <div class="product-price">$29.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7: Signature Pizza -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="gio.png" alt="Gio’s signature pizza">
+      </div>
+      <div class="product-body">
+        <div class="product-name">Gio’s Signature Pizza</div>
+        <div class="product-meta">Soppressa, peppers, olives &amp; fior di latte.</div>
+        <div class="product-tag">Pizza</div>
+        <div class="product-bottom">
+          <div class="product-price">$27.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8: Margherita -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="pizza.png" alt="Margherita pizza">
+      </div>
+      <div class="product-body">
+        <div class="product-name">San Marzano Margherita</div>
+        <div class="product-meta">San Marzano tomatoes, basil &amp; olive oil.</div>
+        <div class="product-tag">Pizza</div>
+        <div class="product-bottom">
+          <div class="product-price">$23.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9: Basque Cheesecake -->
+    <article class="product-card">
+      <div class="product-image">
+        <img src="cake.png" alt="Basque cheesecake">
+      </div>
+      <div class="product-body">
+        <div class="product-name">Basque Cheesecake</div>
+        <div class="product-meta">Burnt cheesecake with fresh fruit.</div>
+        <div class="product-tag">Dessert</div>
+        <div class="product-bottom">
+          <div class="product-price">$15.00</div>
+          <button class="btn-mini">Add to cart</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <span>© Gio’s Restaurant · Sample e-commerce layout for portfolio/demo use.</span>
+  <span>Design &amp; code by Jeanette · Not an official ordering system.</span>
+</footer>
+
+</body>
+</html>
